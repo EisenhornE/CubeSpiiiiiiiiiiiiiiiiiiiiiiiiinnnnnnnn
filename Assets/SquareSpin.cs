@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This code is just me testing how to use Android Development in Unity. There's nothing noteworthy here.
+// The codes here are already self-explanatory.
+
 public class SquareSpin : MonoBehaviour
 {
     private Rigidbody2D _rb;
@@ -18,6 +21,7 @@ public class SquareSpin : MonoBehaviour
 
     void Update()
     {
+        // For the initial kick for it to rotate
         _rb.transform.Rotate(0, 0, _rotationSpeed * Time.deltaTime);
         if (!_left)
         {
@@ -29,6 +33,7 @@ public class SquareSpin : MonoBehaviour
         }
     }
 
+    // SO it will turn left
     IEnumerator Left()
     {
         yield return new WaitForSeconds(5);
@@ -42,7 +47,7 @@ public class SquareSpin : MonoBehaviour
             Debug.Log("Left");
         }
     }
-
+    // So it will turn right
     IEnumerator Right()
     {
         yield return new WaitForSeconds(5);
